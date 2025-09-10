@@ -1,0 +1,255 @@
+/* Variables de colores  */
+:root {
+    --rojo-principal: #e34c4c;
+    --naranja-claro: #f48a52;
+    --gris-oscuro: #313333;
+    --gris-claro: #f0f0f0;
+    --blanco: #ffffff;
+    --fondo-claro: #f1f2f0;
+}
+
+/* Estilos generales  */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--fondo-claro);
+    color: var(--gris-oscuro);
+    margin: 0;
+}
+
+/* Estilos menu */
+header {
+    background-color: var(--blanco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el logo  */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--gris-oscuro);
+}
+
+/* Tamaño del logo */
+.logo {
+    height: 90px;
+    margin-right: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0.5rem 0;
+    color: var(--gris-oscuro);
+}
+
+/* Estilo para el h2 de bienvenida */
+.titulo-centrado {
+    text-align: center;
+}
+
+/* Estilos de los enlaces  */
+nav a {
+    text-decoration: none;
+    color: var(--gris-oscuro);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--gris-claro);
+}
+
+/* Estilos main */
+main {
+    padding: 2rem;
+}
+
+/* Estilos del grid para las cards */
+.grid-pizzas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Estilos para las cards de las pizza */
+.tarjeta-pizza {
+    background-color: var(--blanco);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-pizza:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-pizza img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 180px;
+    margin-bottom: 1rem;
+}
+
+.seccion-tamano,
+.seccion-extras {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.seccion-tamano strong,
+.seccion-extras strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.seccion-tamano button {
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seccion-tamano button:hover {
+    background-color: #dcdcdc;
+}
+
+/* Estilos para los botones de ingredientes extras */
+.seccion-extras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.seccion-extras button {
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seccion-extras button:hover {
+    background-color: #dcdcdc;
+}
+
+/* Estilo para el botón seleccionado */
+.seleccionado {
+    background-color: var(--rojo-principal) !important;
+    color: var(--blanco) !important;
+    font-weight: bold;
+}
+
+/* Estilo para el input de cantidad */
+input[type="number"] {
+    width: 60px;
+    padding: 0.4rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    border: 1px solid var(--gris-claro);
+    border-radius: 5px;
+}
+
+/* Estilo del botón de agregar al carrito */
+.boton-agregar {
+    background-color: var(--rojo-principal);
+    color: var(--blanco);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.boton-agregar:hover {
+    background-color: #c94040;
+}
+
+.boton-agregado {
+    background-color: #c94040 !important;
+    border: 2px solid var(--gris-oscuro);
+}
+
+/* Estilos para las cards del carrito */
+.tarjeta-carrito {
+    background-color: var(--blanco);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    position: relative;
+}
+
+/* Estilo del botón de eliminar */
+.boton-eliminar {
+    background-color: var(--rojo-principal);
+    color: var(--blanco);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.boton-eliminar:hover {
+    background-color: #c94040;
+}
+
+/* Estilos footer */
+footer {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Media Queries  */
+@media (max-width: 992px) {
+    .grid-pizzas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-pizzas {
+        grid-template-columns: 1fr;
+
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .logo-link {
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+    }
+}
